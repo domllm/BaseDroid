@@ -30,8 +30,23 @@ android {
 }
 
 dependencies {
-    implementation(libs.appcompat.v7)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.firebase.auth.ktx)
+    implementation(platform(libs.google.firebase.bom))
+    implementation(libs.hilt.android)
+
+    // Retrofit
+    implementation(libs.retrofit)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.monitor)
+
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.runner)
     androidTestImplementation(libs.espresso.core)
 }
+
